@@ -1,0 +1,41 @@
+{
+  "name": "RavleUserSide",
+  "version": "1.0.0",
+  "description": "User side web app for ravle.com",
+  "scripts": {
+    "bundle": "webpack -p",
+    "copy": "./node_modules/.bin/copyfiles -f *.* dist",
+    "copyPublic": "./node_modules/.bin/copyfiles public/css/*.* public/img/**/*.* public/js/*.* public/fonts/*.* .ebextensions/*.* dist",
+    "build": "npm run copy && npm run copyPublic && npm run bundle",
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base=dist --progress --color --inline --hot",
+    "start": "node app.js"
+  },
+  "author": "Akash Anjanappa",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "copyfiles": "^1.2.0",
+    "css-hot-loader": "^1.3.1",
+    "css-loader": "^0.28.7",
+    "express": "^4.15.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.5.3",
+    "path": "^0.12.7",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "express": "latest",
+    "firebase-admin": "latest",
+    "npm": "latest",
+    "body-parser": "latest",
+    "stripe": "latest"
+  }
+}

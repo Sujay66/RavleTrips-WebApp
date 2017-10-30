@@ -1,0 +1,275 @@
+
+.div1:hover img{
+    opacity:0.6;
+  	-webkit-transition: .8s ease-in-out;
+  	transition: .8s ease-in-out;
+}
+
+.imageOverlayClass:hover  img{
+  visibility: visible;
+}
+.imageOverlayClass img {
+	padding: 0;
+	bottom: 0;
+	visibility: hidden;
+}
+.imageOverlayClass  {
+	padding: 0;
+	bottom: 0;
+}
+
+
+.border iframe {
+	border: none;
+	margin: 0;
+	padding: 0;
+	opacity: 0.8;
+	display: block;
+	/* Add this */
+	vertical-align: bottom;
+	margin-bottom: -10pxl
+}
+
+/********* Fonts **********/
+
+@font-face {
+	font-family: 'AGaramondPro-Regular';
+	src: url('../fonts/AGaramondPro-Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'DIN 2014 Demi';
+	src: url('../fonts/DIN 2014 Demi.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'DIN 2014 Light';
+	src: url('../fonts/DIN 2014 Light.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'DIN 2014 Italic';
+	src: url('../fonts/DIN 2014 Italic.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Inconsolata-Bold';
+	src: url('../fonts/Inconsolata-Bold.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Inconsolata-Regular';
+	src: url('../fonts/Inconsolata-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/********* End of Fonts *************/
+
+.ravlelogo {
+	height: 35px;
+}
+.header {
+	z-index: 1000;
+	background-color: #fff;
+	line-height: 0px !important;
+}
+.header-font {
+	color: #3B474F;
+	font-family: 'DIN 2014 Light';
+	font-size: 12px;
+	letter-spacing: .1em;
+	padding: 1.5rem 0rem .9rem 0rem !important;
+	z-index: 1000;
+}
+
+/*footer*/
+
+.footer-text {
+	float: left;
+	vertical-align: bottom;
+	color: #3B474F;
+	font-family: 'DIN 2014 Light';
+	font-size: 12px;
+	letter-spacing: .1em;
+}
+.footer-img {
+	float: left;
+	margin-right: 5px;
+}
+.footer-img img {
+	float: left;
+	margin-right: 20px;
+}
+.footer-flex {
+	display: inline-flex;
+}
+.social li img {
+	height: 20px;
+	float: right;
+	display: inline-flex;
+	margin-left: 20px;
+}
+.thumbnail {
+	position: relative;
+}
+.caption p {
+	position: absolute;
+	top: 45%;
+	left: 0;
+	width: 100%;
+	font-size: 50px;
+	color: #fff;
+}
+@media (max-width: 575px) {
+	.social li img {
+		height: 20px;
+		float: left;
+		display: inline-flex;
+		margin-left: 20px;
+		margin-bottom: 20px;
+	}
+}
+.float-right {
+	float: right;
+	list-style-type: none;
+}
+.float-left {
+	float: left;
+}
+
+/*end of footer*/
+
+
+  .video-wrapper {
+		position: relative;
+		z-index: -1;
+		overflow: hidden;
+		width: 100%;
+		max-height: 750px;
+		height: 32.5vw;
+		background: $gray;
+		margin: 0 auto;
+		margin-bottom: 50px;
+    display: none;
+	}
+.video {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -30%;
+	width: 100%;
+	max-width: 1500px;
+	height: 175%;
+	margin: auto;
+}
+.fontAdoPro !important {
+	font-family: 'AGaramondPro-Regular';
+	color: #3B474F;
+	font-size: 1.6rem;
+	letter-spacing: 2px;
+}
+.fontInconRegular {
+	font-family: 'Inconsolata-Regular';
+	color: #3B474F;
+	font-size: .9rem;
+	letter-spacing: .05rem;
+}
+.fontInconRegular text {
+	color: #FF5350;
+	text-decoration: underline;
+}
+.fontDINItalics {
+	font-family: 'DIN 2014 Italic';
+	color: #3B474F;
+	font-size: 1.1rem;
+}
+.alignLeft {
+	text-align: left;
+}
+.border-BorderRadius-None {
+	border: 0;
+	border-radius: 0;
+	margin-bottom: 10%;
+}
+.video-responsive {
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	position: relative;
+	height: 0;
+}
+.video-responsive iframe {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	max-height: 400px;
+	position: absolute;
+}
+.cardTextMarginBottom {
+	margin-bottom: 0.1rem !important;
+}
+.paddingTop75rem {
+	padding-top: 0.75rem;
+	font-family: 'AGaramondPro-Regular';
+	color: #3B474F;
+	font-size: 1.3rem;
+	letter-spacing: .05em;
+	line-height: 1.2;
+}
+.TripListClass {
+	padding-bottom: 37px;
+}
+@media (min-width: 576px) {
+  .video-wrapper {
+		position: relative;
+		z-index: -1;
+		overflow: hidden;
+		width: 100%;
+		max-height: 750px;
+		height: 32.5vw;
+		background: $gray;
+		margin: 0 auto;
+		margin-bottom: 50px;
+    display: block;
+	}
+}
+
+
+
+@media (min-width: 768px) {
+
+@media (min-width: 870px) {
+	.trip-container {
+		width: 75%;
+	}
+}
+@media (min-width: 992px) {
+	.header-font {
+		color: #3B474F;
+		font-family: 'DIN 2014 Light';
+		font-size: 12px;
+		letter-spacing: .1em;
+		padding-right: 1rem !important;
+		padding-left: 1rem !important;
+		z-index: 1000;
+	}
+	.paddingTop75rem {
+		padding-top: 0.75rem;
+		font-family: 'AGaramondPro-Regular';
+		color: #3B474F;
+		font-size: 1.6rem;
+		letter-spacing: .05em;
+		line-height: 1.2;
+	}
+}
+@media (min-width: 1100px) {}
+@media (min-width: 1200px) {}
+.mb-20 {
+	margin-bottom: 20px;
+}

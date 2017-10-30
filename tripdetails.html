@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<title>Ravle</title>
+	<script src="public/js/jquery.min.js" type="text/javascript"></script>
+	<script src="public/js/popper.min.js" type="text/javascript"></script>
+	<link href="public/css/style.css" rel="stylesheet">
+	<link href="public/css/bootstrap.min.css" rel="stylesheet">
+	<link href="public/css/tripsdetails.css" rel="stylesheet">
+	<link rel="icon" href="public/img/icons/favicon.ico" type="image/x-icon" />
+	<script>
+        function load() {
+            var fadeTarget = document.getElementById("showboxId");
+            var fadeEffect = setInterval(function () {
+                if (!fadeTarget.style.opacity) {
+                    fadeTarget.style.opacity = 1;
+                }
+                if (fadeTarget.style.opacity < 0.1) {
+                    clearInterval(fadeEffect);
+                } else {
+                    fadeTarget.style.opacity -= 0.1;
+                }
+                $("#showboxId").remove();
+                setInterval(function () {
+                    $("#sitewrapperId").removeClass("hiddenBackground");
+                }, 200);
+
+            }, 100);
+
+        }
+	</script>
+	<script>
+		 (function(h,o,t,j,a,r){
+				 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				 h._hjSettings={hjid:656800,hjsv:6};
+				 a=o.getElementsByTagName('head')[0];
+				 r=o.createElement('script');r.async=1;
+				 r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				 a.appendChild(r);
+		 })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+
+</head>
+<body onload="load()">
+<div class="outerdiv" id="showboxId">
+	<div class="Aligner-item">
+		<div class="showbox">
+			<div class="loader">
+				<svg class="circular" viewBox="25 25 50 50">
+					<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+				</svg>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- site wrapper div starts -->
+<!--Navigation -->
+<div class="sitewrapper hiddenBackground" id="sitewrapperId">
+	<div class="container" id="header">
+		<div class="header">
+			<nav class="navbar navbar-light navbar-expand-lg bg-faded justify-content-center">
+				<a class="navbar-brand d-flex w-50 mr-auto" href="/"><img class="ravlelogo" href="/home"
+																		  src="public/img/icons/logo.svg"></a>
+				<button class="navbar-toggler" data-target="#collapsingNavbar3" data-toggle="collapse" type="button">
+					<span class="navbar-toggler-icon"></span></button>
+				<div class="navbar-collapse collapse" id="collapsingNavbar3">
+					<ul class="navbar-nav mx-auto w-100 justify-content-center">
+						<li class="nav-item">
+							<a class="nav-link header-font" href="/trips">OUR&nbsp;TRIPS</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link header-font" href="/#myAnchor" href="/home">OUR&nbsp;FILMMAKERS</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link header-font" href="/#myAnchor">JOIN&nbsp;US</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+						<li class="nav-item" id="login">
+							<div class="nav-link header-font" data-target="#loginModal" data-toggle="modal"
+								 id="loginContent" style="cursor: pointer">
+								Login
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div><!--  Navigation bar ends -->
+	<section id="youtubeVideoSection row">
+		<div class="video-responsive" id="videoClass">
+			<iframe allowfullscreen class="embed-responsive-item" id="iframeID" name="iframeID" src=""
+					style="border:0"></iframe>
+		</div>
+	</section>
+	<div class="tripdetailsTextClass row" id="tripdetailsText">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-xs-12 col-md-8 col-lg-8">
+					<div class="card border-BorderRadius-None">
+						<div class="card-block">
+							<h3 class="card-title fontAdoPro alignLeft cardTextMarginBottom paddingTop75rem"
+								id="tripTitle"></h3>
+							<p class="card-text fontInconRegular alignLeft cardTextMarginBottom"
+							   id="PhotographerDetails"></p><!-- Find a way to fit the location with the same id -->
+							<p class="card-text fontDINItalics alignLeft cardTextMarginBottom" id="tripDescription">
+								<!-- try to set this in the same line by declaring id="tripLocation"-->
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-lg-4">
+					<div class="row">
+						<div class="col-12 marginleftClass" style="padding-bottom:20px">
+							<div class="d-flex justify-content-start no-wrap rrssb-buttons">
+								<a class="popup" href="https://www.facebook.com/sharer/sharer.php?u=https://ravle.com"
+								   id="fbButton"><img src="public/img/icons/facebook%20copy.svg"
+													  style=" width: 20px;height: 20px;margin-right:20px"></a> <a
+									class="popup" href="https://twitter.com/intent/tweet?text=https://ravle.com"><img
+									src="public/img/icons/twitter%20copy.svg"
+									style="width: 20px;height: 20px;margin-right:20px"></a> <a class="popup"
+																							   href="mailto:?Subject=your%20subject"><img
+									src="public/img/icons/Mail%20copy.svg"
+									style="width: 20px;height: 20px;margin-right:20px"></a>
+								<button class="bareboneButton" data-clipboard-text="https://ravle.com/"
+										data-placement="right" data-trigger="click" id="copyButton" type="button"><img
+										src="public/img/icons/link%20copy.svg"
+										style="width: 20px;height: 20px;margin-right:20px"></button>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div id="checkout-parent" class="col-12 marginleftGetButton" style="padding-bottom:20px">
+							<button id="checkout" class="mapbutton" style="cursor:pointer;" type="button">GET THE MAP
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="containerInner">
+			<div class="row" style="margin-right:-9px; margin-top:25px;">
+				<div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+					<div style="float: left;">
+						<div align="left" class="map-view-gallery push-in mb-25">
+							SPOTS FROM THE FILM
+						</div>
+					</div>
+					<div style="float: right;">
+						<button class="map-view-gallery mb-25" id="MapButton" onclick="MapButtonClick()"
+								style="cursor:pointer" type="button">MapView |
+						</button>
+						<button class="map-view-gallery" id="Gallery" onclick="GalleryClick()" style="cursor:pointer;"
+								type="button">Gallery
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container" id="galleryDiv">
+		<div class="containerClass ml-container containerInner" id="spotsgallery"></div>
+	</div>
+	<div class="container" id="MapDiv">
+		<div class="containerClass ml-container containerInner">
+			<div class="item">
+				<div id="lockedMap" style="width: 100%; height: auto;" >
+					<img src="/public/img/maps/TripDetailsMap.svg"/>
+				</div>
+				<div id="mapGuideTextId" class="mapGuideText">
+						<text>*double-tap to zoom</text>
+				</div>
+				<div id="map" style="width: 100%; height: 400px;" >
+				</div>
+
+		<div class="routebuttonalign">
+					<button class="routebutton" id="googleMaps" style="cursor:pointer;" type="button">USE
+						GOOGLE MAPS
+					</button>
+					<button class="routebutton" id="appleMaps" style="cursor:pointer;" type="button">USE
+						APPLE MAPS
+					</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class=" containerInner">
+			<div class="row" style="margin-top:30px;margin-left:-24px; margin-bottom:25px">
+				<div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+					<div style="float: left;">
+						<div class="map-view-gallery">TOP RECOMMENDATIONS FROM
+							THE TRIP
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class=" fullspanningDiv" id="experiences">
+
+		<!-- <figure class="snip1156">
+<img src="https://firebasestorage.googleapis.com/v0/b/ravleuserside.appspot.com/o/trips%2Fmontana%2Fexperiences%2Fbannerexperiencethumbnails%2F01banner.jpg?alt=media&token=e307ecd0-14e2-472c-beae-6f96555fca87" />
+<figcaption>
+<div>
+<h2>Max Conversion </h2>
+</div>
+<div>
+<p>Just makes people try to do everything at once.</p>
+</div>
+</figcaption> -->
+
+
+	</div>
+	<div id="dummyDiv"></div>
+
+	<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+		 aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content" style="border-radius: unset; border: none;">
+				<section id="BodySection">
+					<div class="call-outs-container">
+						<div class="call-out1">
+							<div class="iphonesize"><img src="public/img/tripdetails/roadimage.jpg"></div>
+						</div>
+						<div class="call-out2">
+							<div class="fontAdoProModal mb-10">
+								Unlock the Northbound Road Trip
+							</div>
+							<div class="subheadermodal mb-50">
+								ADVENTURE GUIDE
+							</div>
+							<div class="modalparagraph mb-20">
+								Get the Exact GPS locations of the
+								<text>12 SPOTS</text>
+								in Glacier National Park, MT and Banff National Park, AB from
+								<text>HARRISON</text>
+								,
+								<text>NICK</text>
+								,
+								<text>JENNY</text>
+								,
+								<text>CAROLINE</text>
+								,
+								<text>SARAH</text>
+								, and
+								<text>JAKE’s</text>
+								road trip. We hope The Northbound Road Trip film has inspired you to begin to plan your
+								own Northbound Adventure!
+							</div>
+							<div class="red">
+								<div class="modalparagraphwhite mb-20">
+									<text>20%</text>
+									of proceeds from this purchase go to the creators.
+									<text class="mb-20">80%</text>
+									of the proceeds from this purchase will be donated
+									to Glacier Park Conservatory's relief efforts of #spraugefire and future
+									preservation of the park.
+								</div>
+							</div>
+							<!--stripe payment plugin-->
+							<div id="stripe-payment"></div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<!--login modal-->
+	<div class="modal fade" id="loginModal">
+		<div class="modal-dialog" style="width: 300px; " role="document">
+			<div class="modal-content" >
+				<div class="modal-header p-3">
+					<h5 class="modal-title"><img class="ravlelogo" src="public/img/icons/logo.svg"></h5>
+					<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
+							aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<div id="login-modal-content" style="text-align: center"></div>
+					<div id="firebaseui-auth-container" style="width: 260px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section id="footerSection">
+		<div class="container">
+			<hr>
+			<div class="row">
+				<div class="col-sm-8 mb-20 footer-flex">
+					<div class="footer-img"><img class="ravlelogo" src="public/img/icons/logocompass.svg"></div>
+					<div class="footer-text align-self-center">
+						© Ravle. All Rights Reserved.
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<ul class="social" style="list-style-type: none;">
+						<li>
+							<a href="https://www.instagram.com/ravle_co/"><img src="public/img/icons/instagram.svg"></a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/ravle.co/"><img src="public/img/icons/facebook.svg"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section><!-- site wrapper div ends -->
+</div>
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<script src="public/js/firebase.js" type="text/javascript"></script>
+<script src="public/js/utility.js" type="text/javascript"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css"/>
+<link href="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.css" rel="stylesheet" type="text/css">
+<script src="https://js.cit.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript"></script>
+<script src="https://js.cit.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript"></script>
+<script src="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript"></script>
+<script src="https://js.cit.api.here.com/v3/3.0/mapsjs-mapevents.js" type="text/javascript"></script>
+<script src="public/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="public/js/tripdetails.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="public/js/rrssb.min.js" type="text/javascript"></script>
+<script src="public/js/share.js" type="text/javascript"></script>
+<script>
+    window.addEventListener('load', function () {
+        var tripId = utility.GetURLParameter('tripId');
+        if (!tripId) tripId = 1;
+        session.initFirebase(false, tripId, undefined, undefined, () => tripDetail.updatePage(session.tripDetail), () => tripDetail.updatePage(session.tripDetail));
+        session.initLoginUI('#firebaseui-auth-container', null, null);
+    });
+</script>
+
+<script>
+    var btn = document.getElementById('copyButton');
+
+    var clipboard = new Clipboard(btn);
+
+    function setTooltip(btn, message) {
+        $(btn).tooltip('hide')
+            .attr('data-original-title', message)
+            .tooltip('show');
+    }
+
+    function hideTooltip(btn) {
+        setTimeout(function () {
+            $(btn).tooltip('hide');
+        }, 1000);
+    }
+    clipboard.on('success', function (e) {
+        setTooltip(e.trigger, 'Copied!');
+        hideTooltip(e.trigger);
+        console.log(e);
+    });
+    clipboard.on('error', function (e) {
+
+        setTooltip(e.trigger, 'Failed!');
+        hideTooltip(e.trigger);
+        console.log(e);
+    });
+</script>
+
+<script type="text/javascript">
+	/* Demo purposes only */
+    $(".hover").mouseleave(
+        function () {
+            $(this).removeClass("hover");
+        }
+    );
+</script>
+</body>
+</html>
